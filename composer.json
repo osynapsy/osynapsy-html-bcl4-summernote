@@ -1,0 +1,25 @@
+{
+    "name": "osynapsy.net/osynapsy-html-bcl4-summernote",
+    "version": "1.0",
+    "homepage": "http://www.osynapsy.net/html-bcl4-summernote",
+    "type": "library",
+    "description": "Osynapsy summernote component implementation",
+    "keywords": ["Osynapsy", "Bootstrap summernote component"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Pietro Celeste",
+            "email": "p.celeste@osynapsy.net",
+            "homepage": "https://github.com/osynapsy/osynapsy-html-bcl4-summernote/wiki"
+        }
+    ],
+    "require": {
+        "php" : ">=7.2.0",
+        "osynapsy.net/osynapsy-html-bcl4" : "@stable"
+    },
+    "autoload" : {
+        "psr-4": {
+            "Osynapsy\\Bcl4\\Summernote\\": "src/"
+        }
+    }
+}
