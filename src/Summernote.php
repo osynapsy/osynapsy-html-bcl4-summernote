@@ -29,12 +29,12 @@ class Summernote extends TextArea
 
     public static function appendRequiredFileToPage($object)
     {
-        self::requireFile($object, 'assets/Lib/summernote-0.8.18/summernote-bs4.css', 'css');
-        self::requireFile($object, 'assets/Lib/summernote-0.8.18/summernote-bs4.js', 'js');
-        self::requireFile($object, 'assets/Lib/katex-0.9.0/style.min.css', 'css');
-        self::requireFile($object, 'assets/Lib/katex-0.9.0/script.min.js', 'js');
-        self::requireFile($object, 'assets/Lib/summernote-0.8.18/plugin/math/script.js', 'js');
-        self::requireFile($object, 'assets/Bcl4/Summernote/script.js', 'js');
+        self::requireFile($object, 'Lib/summernote-0.8.18/summernote-bs4.css', 'css');
+        self::requireFile($object, 'Lib/summernote-0.8.18/summernote-bs4.js', 'js');
+        self::requireFile($object, 'Lib/katex-0.9.0/style.min.css', 'css');
+        self::requireFile($object, 'Lib/katex-0.9.0/script.min.js', 'js');
+        self::requireFile($object, 'Lib/summernote-0.8.18/plugin/math/script.js', 'js');
+        self::requireFile($object, 'Bcl4/Summernote/script.js', 'js');
     }
 
     public function showFontButtons($superscript = false, $subscript = false, $strikethrough = false)
