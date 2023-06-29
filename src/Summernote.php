@@ -18,24 +18,19 @@ class Summernote extends TextArea
     public function __construct($name)
     {
         parent::__construct($name);
-        $this->att('class','summernote');
-        self::appendRequiredFileToPage();
+        $this->addClass('class','summernote');
+        $this->requireCss('Lib/summernote-0.8.18/summernote-bs4.css');
+        $this->requireJs('Lib/summernote-0.8.18/summernote-bs4.js');
+        $this->requireCss('Lib/katex-0.9.0/style.min.css');
+        $this->requireJs('Lib/katex-0.9.0/script.min.js');
+        $this->requireJs('Lib/summernote-0.8.18/plugin/math/script.js');
+        $this->requireJs('Bcl4/Summernote/script.js');
     }
 
     public function setHeight(int $heightInPixel)
     {
-        $this->att('data-height', $heightInPixel);
-    }
-
-    public static function appendRequiredFileToPage()
-    {
-        self::requireFile(__CLASS__, 'Lib/summernote-0.8.18/summernote-bs4.css', 'css');
-        self::requireFile(__CLASS__, 'Lib/summernote-0.8.18/summernote-bs4.js', 'js');
-        self::requireFile(__CLASS__, 'Lib/katex-0.9.0/style.min.css', 'css');
-        self::requireFile(__CLASS__, 'Lib/katex-0.9.0/script.min.js', 'js');
-        self::requireFile(__CLASS__, 'Lib/summernote-0.8.18/plugin/math/script.js', 'js');
-        self::requireFile(__CLASS__, 'Bcl4/Summernote/script.js', 'js');
-    }
+        $this->attribute('data-height', $heightInPixel);
+    }   
 
     public function showFontButtons($superscript = false, $subscript = false, $strikethrough = false)
     {
