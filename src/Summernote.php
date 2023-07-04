@@ -18,13 +18,13 @@ class Summernote extends TextArea
     public function __construct($name)
     {
         parent::__construct($name);
-        $this->addClass('class','summernote');
-        $this->requireCss('Lib/summernote-0.8.18/summernote-bs4.css');
-        $this->requireJs('Lib/summernote-0.8.18/summernote-bs4.js');
-        $this->requireCss('Lib/katex-0.9.0/style.min.css');
-        $this->requireJs('Lib/katex-0.9.0/script.min.js');
-        $this->requireJs('Lib/summernote-0.8.18/plugin/math/script.js');
-        $this->requireJs('Bcl4/Summernote/script.js');
+        $this->addClass('summernote');
+        $this->requireCss('lib/summernote-0.8.18/summernote-bs4.css');
+        $this->requireJs('lib/summernote-0.8.18/summernote-bs4.js');
+        $this->requireCss('lib/katex-0.9.0/style.min.css');
+        $this->requireJs('lib/katex-0.9.0/script.min.js');
+        $this->requireJs('lib/summernote-0.8.18/plugin/math/script.js');
+        $this->requireJs('bcl4/summernote/script.js');
     }
 
     public function setHeight(int $heightInPixel)
@@ -54,6 +54,6 @@ class Summernote extends TextArea
         }
         $oldbuttons = $this->getAttribute('data-toolbar-buttons') ? explode(',',  $this->getAttribute('data-toolbar-buttons')) : [];
         $buttons = array_merge($oldbuttons, $newbuttons);
-        $this->att('data-toolbar-buttons', implode(',', $buttons));
+        $this->attribute('data-toolbar-buttons', implode(',', $buttons));
     }
 }
